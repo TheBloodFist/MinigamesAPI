@@ -15,7 +15,7 @@ class Flaggame extends Component {
         <div>
             <Navbar/>
             <h2>Flaggame</h2>
-            <p>Errate das richtige Land</p>
+            <p>Klicke auf die richtige Flagge</p>
             <Quiz/>
             
         </div>

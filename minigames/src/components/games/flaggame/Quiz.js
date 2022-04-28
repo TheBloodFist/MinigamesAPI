@@ -13,7 +13,8 @@ class Quiz extends Component {
         super(props);
         this.state = {
             Country: "loading",
-            Points: 0
+            Points: 0,
+            Score: 0
             
         }
     }
@@ -25,18 +26,37 @@ class Quiz extends Component {
 
 
 
+   
 
     PointsUp = (value) => {
-        console.log("alt:"+this.state.Points +"")
+
+
+        if(value) {
+        
         let alt=this.state.Points
 
-        
+        alt++
 
-        this.setState({Points: alt+1})
-         console.log(this.state.Points)
+        this.setState({Points: alt})
+         
 
 
-         this.getCountry()
+         if (alt>this.state.Score) {
+            this.setState({Score: alt})
+
+         }
+
+
+         
+        }
+        else {
+            this.setState({Points: 0})
+            console.log("Punkte:"+this.state.Points +"")
+        }
+
+       console.log(this.state.Points)
+       
+       this.getInfo()
     }
 
 
@@ -45,7 +65,7 @@ class Quiz extends Component {
 
     getCountry = (value) => {
 
-        let randomnumber = Math.floor(Math.random() * 249)
+       
        
 
 
@@ -62,9 +82,10 @@ class Quiz extends Component {
             
                 
                 
-                this.setState({ Country: data[randomnumber].name.common})
-                this.setState({ Flag: data[randomnumber].flags.png})
+                
                 this.setState({ Daten: data})
+
+            this.getInfo()
                 
                 
             
@@ -73,7 +94,16 @@ class Quiz extends Component {
 
     }
 
-   
+    getInfo = (value) => {
+
+    
+    let randomnumber = Math.floor(Math.random() * 249)
+    let data=this.state.Daten
+
+    this.setState({ Country: data[randomnumber].name.common})
+    this.setState({ Flag: data[randomnumber].flags.png})
+
+    }
 
 
     render() {
@@ -84,7 +114,7 @@ class Quiz extends Component {
         return(
         <div>
             <p>{this.state.Country}</p>
-            <p>{this.state.Points}</p>
+            <p>Punkte:{this.state.Points}  Highscore:{this.state.Score}</p>
             <div  className={styles.flagdiv}>
                 <Answer punkte={this.PointsUp} nummer="1" reihenfolge={reihenfolge} bild={this.state.Flag} daten={this.state.Daten}/>
                 <Answer punkte={this.PointsUp} nummer="2" reihenfolge={reihenfolge} bild={this.state.Flag} daten={this.state.Daten}/>
