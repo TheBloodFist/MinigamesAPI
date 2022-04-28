@@ -12,7 +12,8 @@ class Quiz extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            Country: "loading"
+            Country: "loading",
+            Points: 0
             
         }
     }
