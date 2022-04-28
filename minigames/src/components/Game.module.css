@@ -1,0 +1,15 @@
+.game {
+    background-color: red;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    height: 350px;
+}
+
+.game:hover {
+    background-color: orangered;
+}
+
+
+.text {
+    padding-bottom: 15px;
+}
