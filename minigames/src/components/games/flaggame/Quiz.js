@@ -25,6 +25,22 @@ class Quiz extends Component {
 
 
 
+
+    PointsUp = (value) => {
+        console.log("alt:"+this.state.Points +"")
+        let alt=this.state.Points
+
+        
+
+        this.setState({Points: alt+1})
+         console.log(this.state.Points)
+
+
+         this.getCountry()
+    }
+
+
+
  
 
     getCountry = (value) => {
@@ -61,17 +77,19 @@ class Quiz extends Component {
 
 
     render() {
+        
         var reihenfolge = Math.floor(Math.random() * (5 - 1)) + 1
 
         
         return(
         <div>
             <p>{this.state.Country}</p>
+            <p>{this.state.Points}</p>
             <div  className={styles.flagdiv}>
-                <Answer nummer="1" reihenfolge={reihenfolge} bild={this.state.Flag} daten={this.state.Daten}/>
-                <Answer nummer="2" reihenfolge={reihenfolge} bild={this.state.Flag} daten={this.state.Daten}/>
-                <Answer nummer="3" reihenfolge={reihenfolge} bild={this.state.Flag} daten={this.state.Daten}/>
-                <Answer nummer="4" reihenfolge={reihenfolge} bild={this.state.Flag} daten={this.state.Daten}/>
+                <Answer punkte={this.PointsUp} nummer="1" reihenfolge={reihenfolge} bild={this.state.Flag} daten={this.state.Daten}/>
+                <Answer punkte={this.PointsUp} nummer="2" reihenfolge={reihenfolge} bild={this.state.Flag} daten={this.state.Daten}/>
+                <Answer punkte={this.PointsUp} nummer="3" reihenfolge={reihenfolge} bild={this.state.Flag} daten={this.state.Daten}/>
+                <Answer punkte={this.PointsUp} nummer="4" reihenfolge={reihenfolge} bild={this.state.Flag} daten={this.state.Daten}/>
             </div>
         </div>
         

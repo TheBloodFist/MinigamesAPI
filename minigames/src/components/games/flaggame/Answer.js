@@ -24,6 +24,7 @@ class Answer extends Component {
 
        if(asdf==this.props.reihenfolge) {
            console.log("yes")
+           this.props.punkte()
 
        }
        else {
