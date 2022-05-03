@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "react/cjs/react.production.min";
-
+import styles from './Football.module.css';
 
 class Answer extends Component {
 
@@ -25,7 +25,7 @@ class Answer extends Component {
         return (
             <div>
                 
-                <button>{name}</button>
+                <button className={styles.footballer}>{name}</button>
               
             </div>
             
