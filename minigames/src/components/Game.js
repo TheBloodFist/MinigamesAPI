@@ -22,8 +22,7 @@ class Game extends Component {
             
            <NavLink to={"/"+this.props.gamename}>
                <p className={styles.text}>{this.props.gamename}</p>
-               <div className={styles.game}>
-               <img src={this.props.url}></img>
+               <img className={styles.game} src={this.props.url}></img>
                
     
         
@@ -31,7 +30,7 @@ class Game extends Component {
                 
                 
                
-                </div>
+                
                 </NavLink>
            
         )
