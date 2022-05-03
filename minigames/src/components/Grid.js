@@ -23,7 +23,7 @@ class Grid extends Component {
             <div className={styles.games}>
                 
                 <Game gamename="footballgame" url="https://www.laola1.at/images/redaktion/images/Fussball/International/Spanien/Barca/Ronaldo-Messi-Montage_fc3cb_f_1280x720.jpg"/>
-                <Game gamename="flaggame"/>
+                <Game gamename="flaggame" url="https://contentlounge-s3.bf-contentlounge-production.aws.bfops.io/2018-11/austria-3045568_1920.jpg"/>
                 <Game gamename="arerae"/>
                 <Game gamename="423342"/>
                 

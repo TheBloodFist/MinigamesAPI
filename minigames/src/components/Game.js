@@ -15,18 +15,21 @@ import {
 class Game extends Component {
 
 
-    
-    
+   
     render() {
         return (
+  
             
            <NavLink to={"/"+this.props.gamename}>
-               <div className={styles.game}
-    >
+               <p className={styles.text}>{this.props.gamename}</p>
+               <div className={styles.game}>
+               <img src={this.props.url}></img>
+               
+    
         
             
                 
-                <p className={styles.text}>{this.props.gamename}</p>
+                
                
                 </div>
                 </NavLink>

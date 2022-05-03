@@ -2,14 +2,25 @@
     background-color: red;
     border: 1px solid #000000;
     border-radius: 15px;
-    height: 350px;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    
+    
 }
 
 .game:hover {
-    background-color: orangered;
+    opacity: 0.8;
+   
+}
+
+image {
+    
+    max-height: 100%; width: auto;
 }
 
 
+
 .text {
-    padding-bottom: 15px;
+    margin-top: 50px;
 }
