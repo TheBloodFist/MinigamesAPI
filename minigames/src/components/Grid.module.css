@@ -2,9 +2,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 27vw 27vw;
+<<<<<<< Updated upstream
     grid-gap: 70px 15px;
     margin-left: 20px;
     margin-right: 15px;
+=======
+    grid-gap: 70px 20px;
+    margin: 20px;
+   
+>>>>>>> Stashed changes
     
 }
 
