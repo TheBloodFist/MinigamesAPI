@@ -153,14 +153,16 @@ class Ingame extends Component {
                 <br></br>
                 <br></br>
                <p>Hier: {player[1]}</p>
+                <div className={styles2.middlediv}>
+                    <div className={styles2.antworten}>
+                    
+                            <Answer number="1" verein={player[0]} v={random}/>
+                            <Answer number="2" verein={player[0]} r={random}/>
+                            <Answer number="3" verein={player[0]} r={random}/>
+                            <Answer number="4" verein={player[0]} r={random}/>
 
-               <div className={styles2.antworten}>
-               
-                    <Answer number="1" verein={player[0]} v={random}/>
-                    <Answer number="2" verein={player[0]} r={random}/>
-                    <Answer number="3" verein={player[0]} r={random}/>
-                    <Answer number="4" verein={player[0]} r={random}/>
-
+                    </div>
+                    
                </div>
             </div>
         );

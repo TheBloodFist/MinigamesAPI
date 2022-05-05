@@ -1,9 +1,16 @@
+div,body {
+    text-align: center;
+}
+
+
 .footballer {
+    text-align: center;
     background-color: grey;
     padding: 1%;
     margin: 1%;
     border: 1px solid black;
     border-radius: 20px;
+    width: 85%;
     
 }
 
@@ -19,12 +26,19 @@
 
 
 .antworten {
-    
+
+    text-align: center;
     width: 25%;
     height: 25%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     
-   
+   position: fixed;
+   right: 37.5%;
+   left:37.5%;
+}
+
+.middlediv {
+    text-align: center;
 }
