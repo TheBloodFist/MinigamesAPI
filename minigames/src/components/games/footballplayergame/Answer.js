@@ -13,7 +13,7 @@ class Answer extends Component {
 
         if(this.props.r==parseInt(this.props.number)) {
             console.log(this.props.verein)
-            name = this.props.verein
+            name = this.props.verein +"lol"
         }
 
         else {

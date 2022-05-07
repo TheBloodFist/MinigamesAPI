@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Ingame from './components/games/footballplayergame/Ingame.js';
 import Flaggame from './components/games/flaggame/Flaggame.js';
+import Celebgame from './components/games/celebgame/Celebgame.js';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.render(
        <Route exact path="" element={<App />}/>
         <Route exact path="footballgame" element={<Ingame/>}/>
         <Route exact path="flaggame" element={<Flaggame/>}/>
+        <Route exact path="celebgame" element={<Celebgame/>}/>
         </Routes>
    
     </BrowserRouter>

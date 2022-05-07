@@ -18,12 +18,13 @@ class Ingame extends Component {
     }
 
     componentDidMount(){
-        console.log("mounted");
+        
         this.getData();
     }
 
     getData = (value) => {
 
+        console.log("asdf")
 
         
         let randomurl;
@@ -57,7 +58,7 @@ class Ingame extends Component {
             break;
         }
 
-        console.log(randomurl);
+       
 
         let url = 'https://api.football-data.org/v2/competitions/'+randomurl+'/scorers';
         fetch(url,
@@ -95,17 +96,33 @@ class Ingame extends Component {
                 }
 
 
-                console.log(randomurl)
+                
                 this.setState({ [randomurl]: data})
                 e++
             });
         //.then(data => this.setState({daten: data}));
+       
         
         }
+        this.setState({true: true})
     };
 
     getPlayer = ()=>{
        
+
+        let zahl = Math.floor(Math.random() * 10);
+        let name;
+        let playerclub;
+
+        if (!this.state.true) {
+            //console.log("no")
+            name="Loading"
+            playerclub="loading"
+        }
+
+        else {
+            //console.log("yes")
+        
         let randomurl
         switch (Math.floor(Math.random() * 3)) {
 
@@ -130,14 +147,15 @@ class Ingame extends Component {
             randomurl = 'CL';
             break;
         }
-        let zahl = Math.floor(Math.random() * 10);
-        let name;
-        let playerclub;
+        
        let liga=this.state[randomurl]
         
-        console.log(liga)
+        //console.log(randomurl)
+        //console.log(liga)
       
-        return ["hello", "hallo"];
+       
+    }
+    return [name, playerclub];
     }
 
 
@@ -145,6 +163,7 @@ class Ingame extends Component {
     render() {
         let random = Math.floor(Math.random() * 4) + 1;
         let player = this.getPlayer();
+        console.log(player)
         return (
           
             <div>

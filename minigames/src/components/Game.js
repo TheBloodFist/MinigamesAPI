@@ -20,7 +20,7 @@ class Game extends Component {
         return (
   
             
-           <NavLink to={"/"+this.props.gamename}>
+           <NavLink to={"/"+this.props.gameurl}>
                <p className={styles.text}>{this.props.gamename}</p>
                <img className={styles.game} src={this.props.url}></img>
                
