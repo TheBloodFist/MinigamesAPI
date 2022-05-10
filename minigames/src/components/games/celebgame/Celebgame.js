@@ -20,7 +20,7 @@ class Celebgame extends Component {
 
 
         let name = 'Michael Jordan'
-        let api_url = 'https://api.api-ninjas.com/v1/celebrity?min_height=1.69&max_height=1.70'
+        let api_url = 'https://api.api-ninjas.com/v1/celebrity?min_height=2.00&max_height=2.01'
 
         fetch(api_url,
 
