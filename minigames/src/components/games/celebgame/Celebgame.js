@@ -18,9 +18,13 @@ class Celebgame extends Component {
     getData = (value) => {
 
 
-
-        let name = 'Michael Jordan'
-        let api_url = 'https://api.api-ninjas.com/v1/celebrity?min_height=2.00&max_height=2.01'
+        var min = 1.5;
+        var max = 2;
+        var x = (Math.random() * (max - min)) + min;
+        x=x.toFixed(2)
+        console.log(x)
+        
+        let api_url = 'https://api.api-ninjas.com/v1/celebrity?min_height='+x+'&max_height='+(x+1)+''
 
         fetch(api_url,
 
@@ -37,7 +41,6 @@ class Celebgame extends Component {
             
                 
                 console.log(data)
-                
                 this.setState({ Daten: data})
 
      
@@ -46,8 +49,15 @@ class Celebgame extends Component {
             
         });
 
+      this.getRandomPerson()
+
 
     }
+
+
+    getRandomPerson = (value) => { 
+        console.log(this.state.Daten)
+    };
    
     render() {
         return(
