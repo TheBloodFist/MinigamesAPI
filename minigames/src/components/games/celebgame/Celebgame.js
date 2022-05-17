@@ -56,7 +56,7 @@ class Celebgame extends Component {
 
 
     getRandomPerson = (value) => { 
-        console.log(this.state.Daten)
+        //console.log(this.state.Daten)
     };
    
     render() {

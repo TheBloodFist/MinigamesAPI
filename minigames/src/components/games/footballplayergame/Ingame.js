@@ -18,8 +18,7 @@ class Ingame extends Component {
     }
 
     componentDidMount(){
-        
-        this.getData();
+         this.getData();
     }
 
     getData = (value) => {
@@ -104,7 +103,7 @@ class Ingame extends Component {
        
         
         }
-        this.setState({true: true})
+        this.setState({fertig: true})
     };
 
     getPlayer = ()=>{
@@ -114,14 +113,14 @@ class Ingame extends Component {
         let name;
         let playerclub;
 
-        if (!this.state.true) {
-            //console.log("no")
+        if (!this.state.fertig) {
+            console.log("no")
             name="Loading"
             playerclub="loading"
         }
 
         else {
-            //console.log("yes")
+            console.log("yes")
         
         let randomurl
         switch (Math.floor(Math.random() * 3)) {
@@ -148,14 +147,14 @@ class Ingame extends Component {
             break;
         }
         
-       let liga=this.state[randomurl]
+      console.log(this.state[randomurl])
         
         //console.log(randomurl)
-        //console.log(liga)
+        //console.log(this.state)
       
        
     }
-    return [name, playerclub];
+    return [playerclub, name];
     }
 
 
