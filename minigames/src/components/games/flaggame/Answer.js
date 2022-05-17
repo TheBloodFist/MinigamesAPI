@@ -28,7 +28,7 @@ class Answer extends Component {
 
        }
        else {
-        this.props.punkte(false)
+           this.props.punkte(false)
            console.log("no")
 
        }
