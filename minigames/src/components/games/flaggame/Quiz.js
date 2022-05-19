@@ -83,8 +83,6 @@ class Quiz extends Component {
                     <Answer punkte={this.PointsUp} nummer="4" reihenfolge={reihenfolge} bild={this.state.Flag} daten={this.state.Daten} />
                 </div>
             </div>
-
-
         );
 
 
