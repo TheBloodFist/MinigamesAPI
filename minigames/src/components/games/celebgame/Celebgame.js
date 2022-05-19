@@ -15,6 +15,13 @@ class Celebgame extends Component {
         this.getData();
     }
 
+
+    getRandomPerson = (value) => { 
+        let x= Math.round(Math.random() * (this.state.Daten.length))
+        console.log(x)
+        console.log(this.state.Daten[x])
+    };
+
     getData = (value) => {
 
 
@@ -38,28 +45,23 @@ class Celebgame extends Component {
             })
             .then(response => response.json())
             .then(data => { 
-            
-                
-                console.log(data)
-                this.setState({ Daten: data})
 
-     
-                
-                
+              
+                this.setState({ Daten: data})  
+                this.getRandomPerson()
             
         });
 
-      this.getRandomPerson()
-
+      
 
     }
 
 
-    getRandomPerson = (value) => { 
-        //console.log(this.state.Daten)
-    };
+    
    
     render() {
+        
+
         return(
         <div>
             <Navbar/>
