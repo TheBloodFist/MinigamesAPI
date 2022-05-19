@@ -15,15 +15,13 @@ class citygame extends Component {
             <Navbar/>
             <h2>Citygame</h2>
             <p>Füge die richtige Stadt ein</p>
-            <Quiz/>
-            
         </div>
         
         
-        );
+            );
         
         
-    }
+        }
 
 }
 
