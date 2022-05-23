@@ -1,0 +1,38 @@
+.up {
+    text-transform: uppercase;
+
+}
+
+
+.hrl {
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    background-color: grey;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.vs {
+    border: 1px solid black;
+    border-radius: 100px;
+    padding: 5px
+}
+
+.bt {
+    padding: 10px;
+    background-color: aqua;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+.person {
+    border: 1px solid black;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.amount {
+    content:"$";
+}
